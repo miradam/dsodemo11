@@ -1,4 +1,4 @@
-name: DSO Demo Workflow
+name: DSO Demo Workflow to demonstrate Sonar, Snyk
 
 on:
   push:
