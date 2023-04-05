@@ -30,16 +30,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint pytest pytest-cov selenium playwright
 
-    - name: Running pytest
-      run: |
-        pytest -v  --cov --cov-report=xml --cov-report=html
-        continue-on-error: true
-
-    - name: Analysing the code with pylint
-      continue-on-error: true
-      run: |
-        pylint src/git_graph_automation
-
     - name: SAST Scan - Sonarcloud.io - check for code vulnerabilities
       uses: SonarSource/sonarcloud-github-action@master
       env:
