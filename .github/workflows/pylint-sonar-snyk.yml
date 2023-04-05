@@ -1,4 +1,4 @@
-name: pylint
+name: DSO Demo Workflow
 
 on:
   push:
