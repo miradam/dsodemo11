@@ -1,0 +1,30 @@
+name: DSO Demo Workflow to demonstrate Sonar, Snyk
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+      - release/*
+      - feature/*
+      - hotfix/*
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 100
+          
+    - name: DAST Scan - OWASP ZAP Scanner
+      uses: zaproxy/action-baseline@v0.6.1
+      with:
+          docker_name: 'owasp/zap2docker-stable'
+          target: 'http://testphp.vulnweb.com/'
+          rules_file_name: '.zap/rules.tsv'
+          cmd_options: '-a'
