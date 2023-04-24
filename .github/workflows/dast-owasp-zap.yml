@@ -1,4 +1,4 @@
-name: DSO Demo Workflow to demonstrate Sonar, Snyk
+name: DAST - AppSec dynamic web vulnerability scanning
 
 on:
   push:
