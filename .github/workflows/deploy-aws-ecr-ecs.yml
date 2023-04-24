@@ -1,4 +1,4 @@
-name: AWS Deploy - Deployment to Amazon ECS
+name: IAC Deploy - Deployment to Amazon ECS
 
 on:
   push:
