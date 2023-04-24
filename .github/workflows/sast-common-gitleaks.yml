@@ -1,4 +1,4 @@
-name: gitleaks
+name: SAST - gitleaks
 on: [pull_request, push, workflow_dispatch]
 jobs:
   scan:
