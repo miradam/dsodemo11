@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: tfsec
+name: SAST - IAC Terraform tfsec scanning with SARIF integration
 
 on:
   push:
