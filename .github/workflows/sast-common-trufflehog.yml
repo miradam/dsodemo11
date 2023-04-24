@@ -1,4 +1,4 @@
-name: Leaked Secrets Scan
+name: SAST - IAC scan with TruffleHog OSS
 on: [pull_request]
 jobs:
   TruffleHog:
