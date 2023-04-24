@@ -1,4 +1,4 @@
-name: IAC Deploy - Deployment to Amazon infra
+name: SAST - IAC Deploy - Deployment to Amazon ECS and check AWS Terraform security with Trivy in IAC mode
 
 on:
   push:
@@ -81,13 +81,6 @@ jobs:
               repo: context.repo.repo,
               body: output
             })
-
-#      - name: tfsec
-#        if: github.event_name == 'pull_request'
-#        uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
-#        with:
-#          github_token: ${{ github.token }}
-#          working_directory: ''
 
       - name: Run Trivy vulnerability scanner in IaC mode
         uses: aquasecurity/trivy-action@master
