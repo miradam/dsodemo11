@@ -1,4 +1,4 @@
-name: Deploy
+name: SAST - IAC trivy Docker image scanning on AWS ECR with SARIF integration
 
 on:
   push:
@@ -40,7 +40,7 @@ jobs:
       env:
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker build --file AWSPlay/Dockerfile -t $AWS_ECR_REPOSITORY:$IMAGE_TAG .
+        docker build --file Dockerfile -t $AWS_ECR_REPOSITORY:$IMAGE_TAG .
         docker push $AWS_ECR_REPOSITORY:$IMAGE_TAG
 
     - name: Run Trivy vulnerability scanner
