@@ -1,4 +1,4 @@
-name: DSO Demo Workflow to demonstrate Sonar, Snyk
+name: SCA - scan code with Snyk
 
 on:
   push:
