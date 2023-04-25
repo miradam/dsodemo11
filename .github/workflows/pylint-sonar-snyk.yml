@@ -1,4 +1,4 @@
-name: DSO Demo Workflow to demonstrate Sonar, Snyk
+name: SAST - test code with SonarQube sonarcloud.io
 
 on:
   push:
@@ -35,17 +35,3 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    
-    - name: SCA Scan - Snyk.io - check for dependency vulnerabilities
-      uses: snyk/actions/python@master
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-          
-    - name: DAST Scan - OWASP ZAP Scanner
-      uses: zaproxy/action-baseline@v0.6.1
-      with:
-          docker_name: 'owasp/zap2docker-stable'
-          target: 'http://testphp.vulnweb.com/'
-          rules_file_name: '.zap/rules.tsv'
-          cmd_options: '-a'
