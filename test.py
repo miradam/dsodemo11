@@ -1,5 +1,6 @@
 from app import app
 
+password = '9-zs!Jq2$-?JncDm'
 
 def test1():
     response = app.test_client().get('/')
