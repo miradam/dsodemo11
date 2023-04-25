@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
+password = '9-zs!Jq2$-?JncDm-FLASK-APP'
+
 app = Flask(__name__)
 
 # /// = relative path, //// = absolute path
