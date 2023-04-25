@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
-password = '9-zs!Jq2$-?JncDm-FLASK-APP-2'
+password = '9-zs!Jq2$-?JncDmASADSDSFF'
 
 app = Flask(__name__)
 
